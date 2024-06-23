@@ -4,16 +4,17 @@ function Navbar() {
     return (
         <div className={styles.navbar}>
             <div className={styles.navbarElement}>
-                <span className={`material-icons-outlined ${styles.icon}`}>home</span>
-                <span className={styles.iconText}>Home</span>
+                <h2>UltraShop</h2>
             </div>
             <div className={styles.navbarElement}>
-                <span className={`material-icons-outlined ${styles.icon}`}>local_mall</span>
-                <span className={styles.iconText}>Shop</span>
+                <span>Home</span>
+            </div>
+            <div className={styles.navbarElement}>
+                <span>Shop</span>
             </div>
             <div className={styles.navbarElement}>
                 <span className={`material-icons-outlined ${styles.icon}`}>shopping_cart</span>
-                <span className={styles.iconText}>Cart</span>
+                <span>0</span>
             </div>
         </div>
     )
