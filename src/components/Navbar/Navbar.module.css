@@ -1,0 +1,22 @@
+.navbar {
+    display: flex;
+    gap: 20px;
+    padding: 20px 40px;
+    background-color: rgb(240, 240, 240);
+}
+
+.navbarElement {
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+}
+.navbarElement:nth-child(3) {
+    margin-left: auto;
+}
+.navbarElement .icon {
+    font-size: 1.2em;
+}
+.navbarElement .iconText {
+    vertical-align: middle;
+}
+
