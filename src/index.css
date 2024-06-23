@@ -5,6 +5,17 @@
 }
 
 body {
+    min-height: 100vh;
     font-family: Roboto;
     margin: 0px;
+}
+
+#root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex-grow: 1;
 }
