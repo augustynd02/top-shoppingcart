@@ -1,6 +1,8 @@
 .navbar {
+    position: relative;
     display: flex;
-    gap: 20px;
+    justify-content: center;
+    gap: 40px;
     padding: 20px 40px;
     background-color: rgb(240, 240, 240);
 }
@@ -9,9 +11,27 @@
     display: flex;
     align-items: center;
     font-size: 1.5em;
+    border-bottom: 1px solid transparent;
+    cursor: pointer;
 }
-.navbarElement:nth-child(3) {
-    margin-left: auto;
+.navbarElement:hover {
+    border-bottom: 1px solid gray;
+}
+.navbarElement:nth-child(1) {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 40px;
+    border: none;
+    cursor: default;
+}
+.navbarElement:nth-child(1) h2 {
+    margin: 0px;
+}
+.navbarElement:nth-child(4) {
+    position: absolute;
+    right: 40px;
+    border: none;
 }
 .navbarElement .icon {
     font-size: 1.2em;
@@ -19,4 +39,3 @@
 .navbarElement .iconText {
     vertical-align: middle;
 }
-
