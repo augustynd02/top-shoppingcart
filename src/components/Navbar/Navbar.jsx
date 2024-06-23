@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styles from './Navbar.module.css'
 
 function Navbar() {
@@ -7,13 +8,15 @@ function Navbar() {
                 <h2>UltraShop</h2>
             </div>
             <div className={styles.navbarElement}>
-                <span>Home</span>
+                <Link to="/home">Home</Link>
             </div>
             <div className={styles.navbarElement}>
-                <span>Shop</span>
+                <Link to="/shop">Shop</Link>
             </div>
             <div className={styles.navbarElement}>
-                <span className={`material-icons-outlined ${styles.icon}`}>shopping_cart</span>
+                <Link to="/cart">
+                    <span className={`material-icons-outlined ${styles.icon}`}>shopping_cart</span>
+                </Link>
                 <span>0</span>
             </div>
         </div>
