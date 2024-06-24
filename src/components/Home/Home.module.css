@@ -1,0 +1,51 @@
+.home {
+    height: 100%;
+    font-family: 'Playwrite NZ';
+
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+}
+
+.motto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.motto h1 {
+    font-size: 4em;
+    margin: 0px;
+}
+.motto p {
+    margin: 0px;
+    font-style: italic;
+}
+
+.about {
+    font-family: Roboto;
+    font-size: 1.5em;
+    text-align: center;
+    width: 100vw;
+    padding: 20px;
+    background-color: rgb(225, 241, 221);
+}
+
+.shopButton {
+    padding: 20px 40px;
+    background-color: white;
+    border: 2px solid rgb(138, 194, 127);
+    color: rgb(138, 194, 127);
+    font-size: 2em;
+    font-style: bold;
+    cursor: pointer;
+    border-radius: 8px;
+
+    transition: 0.1s ease-out;
+}
+.shopButton:hover {
+    background-color: rgb(138, 194, 127);
+    color: white;
+}

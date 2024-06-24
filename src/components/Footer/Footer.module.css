@@ -1,10 +1,9 @@
 .footer {
     height: 40px;
-    background-color: rgb(240, 240, 240);
+    background-color: rgb(138, 194, 127);
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.footer span {
-    font-size: 24px;
+    font-size: 1em;
 }
