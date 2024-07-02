@@ -8,8 +8,8 @@ function Product({ data }) {
             </div>
             <div className={styles.productInfo}>
                 <h3>{data.title}</h3>
-                <p>{data.description}</p>
-                <span>{data.price}</span>
+                {/* <p>{data.description}</p> */}
+                <span>{data.price}$</span>
             </div>
         </div>
     )
