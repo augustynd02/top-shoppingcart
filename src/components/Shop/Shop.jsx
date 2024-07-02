@@ -40,8 +40,8 @@ function Shop() {
                 <select id="category" onChange={(e) => { handleCategoryChange(e)}}>
                     <option value="electronics">Electronics</option>
                     <option value="jewelery">Jewelery</option>
-                    <option value="men's clothing">Men's clothing</option>
-                    <option value="women's clothing">Women's clothing</option>
+                    <option value="men's clothing">Men&#39;s clothing</option>
+                    <option value="women's clothing">Women&#39;s clothing</option>
                 </select>
             </div>
             <div className={styles.productList}>
