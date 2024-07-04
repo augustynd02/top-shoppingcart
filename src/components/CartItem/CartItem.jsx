@@ -6,11 +6,9 @@ function CartItem({item}) {
             <div className={styles.imageContainer}>
                 <img src={item.image} />
             </div>
-            <div className={styles.title}>
+            <div className={styles.info}>
                 <h3>{item.title}</h3>
-            </div>
-            <div className={styles.price}>
-                <span>{item.price}</span>
+                <span>{item.price}$</span>
             </div>
             <div className={styles.buttonsContainer}>
                <span className={`material-icons-outlined ${styles.icon}`}>delete</span>

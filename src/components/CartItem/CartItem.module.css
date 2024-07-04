@@ -1,0 +1,26 @@
+.item {
+    display: flex;
+    gap: 1em;
+    height: 100px;
+}
+
+.imageContainer {
+    width: 100px;
+    height: 100px;
+}
+.imageContainer img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+}
+.info h3 {
+    margin: 0px 0px 1em;
+}
+
+.buttonsContainer {
+    margin-left: auto;
+}
