@@ -1,9 +1,11 @@
 import styles from './Shop.module.css';
 import { useState, useEffect } from 'react';
+import { useOutletContext } from 'react-router-dom';
 import Product from '../Product/Product';
 
 function Shop() {
     const [data, setData] = useState([]);
+    const [cart, setCart] = useOutletContext();
     const [query, setQuery] = useState("");
     const [category, setCategory] = useState("electronics");
     const [loading, setLoading] = useState(true);
@@ -31,7 +33,7 @@ function Shop() {
     const createProductNodes = (data) => {
         const dataCopy = [...data]
         return dataCopy.map(productData => {
-            return <Product data={productData} key={productData.id}/>
+            return <Product data={productData} cart={cart} setCart={setCart} key={productData.id}/>
         })
     }
 
