@@ -21,6 +21,19 @@ function CartItem({ item, cart, setCart }) {
         }
     }
 
+    const handleDeletion = () => {
+        const cartCopy = [...cart];
+        let index;
+        for (let i = 0; i < cartCopy.length; i++) {
+            if (cartCopy[i].id == item.id) {
+                index = i;
+                break;
+            }
+        }
+        cartCopy.splice(index, 1);
+        setCart(cartCopy);
+    }
+
     return (
         <div className={styles.item}>
             <div className={styles.imageContainer}>
