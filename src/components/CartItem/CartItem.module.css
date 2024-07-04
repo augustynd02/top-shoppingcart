@@ -22,5 +22,29 @@
 }
 
 .buttonsContainer {
+    position: relative;
     margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5em;
+}
+.buttonsContainer button {
+    background-color: white;
+    vertical-align: middle;
+    cursor: pointer;
+    border: none;
+}
+
+.quantity {
+    font-size: 1.2em;
+    margin: 0.5em;
+}
+
+.remove:hover, .delete:hover {
+    color: red;
+}
+
+.add:hover {
+    color: green;
 }

@@ -15,7 +15,7 @@ function CartItem({ item, cart, setCart }) {
         const cartCopy = [...cart];
         for (let i = 0; i < cartCopy.length; i++) {
             if (cartCopy[i].id == item.id) {
-                cartCopy[i].quantity -= 1;
+                if (cartCopy[i].quantity > 0) cartCopy[i].quantity -= 1;
                 setCart(cartCopy);
             }
         }
@@ -31,13 +31,17 @@ function CartItem({ item, cart, setCart }) {
                 <span>{item.price}$</span>
             </div>
             <div className={styles.buttonsContainer}>
-                <span className={`material-icons-outlined ${styles.icon}`}>delete</span>
-                <button onClick={() => { handleDecrementation() }}>
-                    <span className={`material-icons-outlined ${styles.icon} ${styles.remove}`}>remove</span>
-                </button>
-                <span className={styles.quantity}>{item.quantity}</span>
-                <button onClick={() => { handleIncrementation() }}>
-                    <span className={`material-icons-outlined ${styles.icon}`}>add</span>
+                <div className={styles.quantityControls}>
+                    <button onClick={() => { handleDecrementation() }}>
+                        <span className={`material-icons-outlined ${styles.icon} ${styles.remove}`}>remove</span>
+                    </button>
+                    <span className={styles.quantity}>{item.quantity}</span>
+                    <button onClick={() => { handleIncrementation() }}>
+                        <span className={`material-icons-outlined ${styles.icon} ${styles.add}`}>add</span>
+                    </button>
+                </div>
+                <button onClick={() => { handleDeletion() }}>
+                    <span className={`material-icons-outlined ${styles.icon} ${styles.delete}`}>delete</span>
                 </button>
             </div>
         </div>
