@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import styles from './Navbar.module.css'
 
-function Navbar() {
+function Navbar({ cartItems }) {
     return (
         <div className={styles.navbar}>
             <div className={styles.navbarElement}>
@@ -16,8 +16,8 @@ function Navbar() {
             <div className={styles.navbarElement}>
                 <Link to="/cart">
                     <span className={`material-icons-outlined ${styles.icon}`}>shopping_cart</span>
+                    <span>{cartItems}</span>
                 </Link>
-                <span>0</span>
             </div>
         </div>
     )
