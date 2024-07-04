@@ -6,6 +6,8 @@
     padding: 20px 40px;
     background-color: rgb(138, 194, 127);
     color: white;
+
+    vertical-align: middle;
 }
 .navbarElement {
     display: flex;
@@ -33,11 +35,11 @@
     right: 40px;
     border: none;
 }
+.navbarElement:nth-child(4) span {
+    vertical-align: middle;
+}
 .navbarElement .icon {
     font-size: 1.2em;
-}
-.navbarElement .iconText {
-    vertical-align: middle;
 }
 
 a {
