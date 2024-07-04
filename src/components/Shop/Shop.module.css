@@ -5,3 +5,21 @@
     gap: 2em;
     padding: 2em;
 }
+
+.loader {
+    width: 100px;
+    height: 100px;
+    border: 10px solid rgb(224, 222, 222);
+    border-bottom-color: rgb(138, 194, 127);
+    border-radius: 50%;
+    animation: rotation 1s linear infinite;
+    }
+
+    @keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

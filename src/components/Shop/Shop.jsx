@@ -6,6 +6,7 @@ function Shop() {
     const [data, setData] = useState([]);
     const [query, setQuery] = useState("");
     const [category, setCategory] = useState("electronics");
+    const [loading, setLoading] = useState(true);
 
     const handleInputChange = (e) => {
         setQuery(e.target.value);
@@ -17,9 +18,11 @@ function Shop() {
 
     useEffect(() => {
         const getProducts = async () => {
+            setLoading(true);
             const response = await fetch(`https://fakestoreapi.com/products/category/${category}`)
             const responseData = await response.json();
             setData(responseData);
+            setLoading(false);
         }
 
         getProducts();
@@ -30,6 +33,12 @@ function Shop() {
         return dataCopy.map(productData => {
             return <Product data={productData} key={productData.id}/>
         })
+    }
+
+    if (loading) {
+        return (
+            <span className={styles.loader}></span>
+        )
     }
 
     return (
