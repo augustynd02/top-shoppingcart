@@ -1,9 +1,22 @@
 import styles from './Product.module.css';
 
 function Product({ data, cart, setCart }) {
-    function clickHandler(e) {
+    const clickHandler = (e) => {
         e.preventDefault();
-        setCart([...cart, data]);
+        let itemExists = false;
+        const cartCopy = [...cart];
+        for (let i = 0; i < cartCopy.length; i++) {
+            if(cartCopy[i].id == data.id) {
+                cartCopy[i].quantity += 1;
+                itemExists = true;
+                setCart(cartCopy);
+            }
+        }
+        // adding new item to cart
+        if(!itemExists) {
+            const newData = {...data, quantity: 1};
+            setCart([...cart, newData]);
+        }
         console.log(cart);
     }
 

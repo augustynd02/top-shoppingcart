@@ -9,7 +9,7 @@ function Cart() {
             <h2>Your shopping cart:</h2>
             <div className={styles.cart}>
                 {cart.map(item => {
-                    return <CartItem item={item} key={item.id} />
+                    return <CartItem item={item} cart={cart} setCart={setCart} key={item.id} />
                 })}
             </div>
         </div>
