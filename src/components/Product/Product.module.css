@@ -24,9 +24,25 @@
     position: relative;
 }
 .productInfo h3 {
-    font-size: 1em;
+    font-size: 0.8em;
     margin: 0px;
 }
 .productInfo span {
 
+}
+
+.addButton {
+    padding: 5px 10px;
+    background-color: white;
+    border: 2px solid rgb(138, 194, 127);
+    color: rgb(138, 194, 127);
+    font-style: bold;
+    cursor: pointer;
+    border-radius: 8px;
+
+    transition: 0.1s ease-out;
+}
+.addButton:hover {
+    background-color: rgb(138, 194, 127);
+    color: white;
 }

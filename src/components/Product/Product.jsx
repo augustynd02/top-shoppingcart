@@ -17,7 +17,6 @@ function Product({ data, cart, setCart }) {
             const newData = {...data, quantity: 1};
             setCart([...cart, newData]);
         }
-        console.log(cart);
     }
 
     return (
@@ -30,7 +29,7 @@ function Product({ data, cart, setCart }) {
                 {/* <p>{data.description}</p> */}
                 <span>{data.price}$</span>
             </div>
-            <button onClick={(e) => { clickHandler(e) }}>Add to cart</button>
+            <button className={styles.addButton} onClick={(e) => { clickHandler(e) }}>Add to cart</button>
         </div>
     )
 }
