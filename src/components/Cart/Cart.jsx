@@ -13,8 +13,9 @@ function Cart() {
                     return <CartItem item={item} cart={cart} setCart={setCart} key={item.id} />
                 })}
             </div>
-            <div className={styles.checkout}>
+            <div className={styles.checkoutContainer}>
                 <h2>Total: {total}$</h2>
+                <button className={styles.checkout}>Checkout</button>
             </div>
         </div>
     )
