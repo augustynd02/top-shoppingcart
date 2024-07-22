@@ -6,6 +6,23 @@
     padding: 2em;
 }
 
+.search input {
+    border: none;
+    border-bottom: 2px solid rgb(138, 194, 127);
+    background-color: rgb(230, 235, 229);
+    padding: 0.5em;
+    margin-right: 1em;
+    height: 2.5em;
+}
+
+.search select {
+    border: none;
+    border-bottom: 2px solid rgb(138, 194, 127);
+    background-color: rgb(230, 235, 229);
+    padding: 0.5em;
+    height: 2.5em;
+}
+
 .loader {
     width: 100px;
     height: 100px;
