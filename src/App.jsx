@@ -5,10 +5,11 @@ import { Outlet } from 'react-router-dom';
 
 function App() {
   const [cart, setCart] = useState([]);
+  const cartItems = cart.map(item => item.quantity).reduce((sum, cur) => sum + cur, 0);
 
   return (
     <>
-      <Navbar cartItems={cart.length}/>
+      <Navbar cartItems={cartItems}/>
       <div className="main">
         <Outlet context={[cart, setCart]}/>
       </div>
