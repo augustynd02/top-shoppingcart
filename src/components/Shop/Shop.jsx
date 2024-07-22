@@ -32,7 +32,8 @@ function Shop() {
 
     const createProductNodes = (data) => {
         const dataCopy = [...data]
-        return dataCopy.map(productData => {
+        const filteredData = dataCopy.filter(item => item.title.toLowerCase().includes(query.toLowerCase()));
+        return filteredData.map(productData => {
             return <Product data={productData} cart={cart} setCart={setCart} key={productData.id}/>
         })
     }
